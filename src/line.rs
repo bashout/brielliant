@@ -1,33 +1,32 @@
-use std::path::Path;
 use iced::widget::{button, column, text};
 use iced::Element;
 use chrono::Local;
 
 #[derive(Default)]
-pub struct Line {
+pub struct Entry {
     action: String,
     date_added: Local
 }
 
 #[derive(Debug, Clone)]
-pub enum LineAction {
+pub enum EntryAction {
     Add,
     Delete
 }
 
-impl Line {
-    pub fn view(sounds: Vec<Line>) -> Element<LineAction> {
+impl Entry {
+    pub fn view(entries: Vec<Entry>) -> Element<EntryAction> {
         column![
-            text("This is a sound").size(20),
-            button("Play Sound").on_press(LineAction::Add),
+            text("This is an entry").size(20),
+            button("add entry").on_press(EntryAction::Add),
         ]
         .spacing(10)
         .into()
     }
 
-    pub fn update(&mut self, message: LineAction) {
+    pub fn update(&mut self, message: EntryAction) {
         match message {
-            LineAction::Add => {
+            EntryAction::Add => {
                 panic!()
             }
             _ => panic!()
