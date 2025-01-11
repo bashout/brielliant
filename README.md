@@ -26,5 +26,5 @@ Brielliant is a planner application inspired by the simplicity and elegance of a
    ```bash
     cargo build --releass
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
