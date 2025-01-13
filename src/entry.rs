@@ -1,11 +1,10 @@
 use iced::widget::{button, column, text};
 use iced::Element;
-use chrono::Local;
+use time::Date;
 
-#[derive(Default)]
 pub struct Entry {
     action: String,
-    date_added: Local
+    date_added: Date
 }
 
 #[derive(Debug, Clone)]
